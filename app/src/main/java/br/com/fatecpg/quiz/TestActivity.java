@@ -27,7 +27,7 @@ public class TestActivity extends AppCompatActivity {
 
     private void createTest(){
         Question q = new Question();
-        q.question="Qual a resposta para a vida, universo e tudo mais?";q.answer="42";q.options = new String[]{"Nada","42","0"};
+        q.question="Qual a resposta para a vida, universo e tudo mais??";q.answer="42";q.options = new String[]{"Nada","42","0"};
         questions.add(q);
     }
 
