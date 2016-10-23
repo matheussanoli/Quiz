@@ -13,13 +13,13 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/resul"/>
 
-    <ListView
-        android:id="@+id/list1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+  <Button
+      android:layout_width="match_parent"
+      android:onClick="Inicio"
+      android:text="Inicio"
+      android:layout_height="wrap_content" />
 
-    </ListView>
 </LinearLayout>

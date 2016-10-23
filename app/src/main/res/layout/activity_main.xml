@@ -5,19 +5,46 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.fatecpg.quiz.MainActivity">
-<EditText
+<TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/qtdperguntas"
+    android:text="Digite o numero de questoes que deseja - 10 - 20 ou 30 "
     />
+    <EditText
+    android:layout_width="match_parent"
+    android:hint="Digite o numero de questões"
+    android:maxLength="2"
+    android:layout_height="wrap_content"
+    android:id="@+id/qtdperguntas"
 
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Testes Realizados "
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resulteste"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:id="@+id/Teste"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="initTest"
-        android:layout_alignParentBottom="true"
-        android:text="INICIAR"/>
+        android:background="@color/colorPrimaryDark"
+        android:text="INICIAR"
+        android:fontFamily="serif"
+        android:textColor="#FFFFFF" />
 </LinearLayout>
+
+
