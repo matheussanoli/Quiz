@@ -9,10 +9,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 public class TestActivity extends AppCompatActivity {
-    private ArrayList<Question> questions = new ArrayList<>();
-    private ArrayList<String> userAnswers = new ArrayList<>();
+    public static ArrayList<Question> questions = new ArrayList<>();
+    public static ArrayList<String> userAnswers = new ArrayList<>();
     private int position = 0;
 
     @Override
@@ -26,9 +28,27 @@ public class TestActivity extends AppCompatActivity {
     }
 
     private void createTest(){
+
+
         Question q = new Question();
-        q.question="Qual a resposta para a vida, universo e tudo mais??";q.answer="42";q.options = new String[]{"Nada","42","0"};
+        q.question="1+1";q.answer="2";q.options = new String[]{"1","2","0"};
         questions.add(q);
+        q = new Question();
+        q.question="2+3";q.answer="5";q.options = new String[]{"5","1","-1"};
+        questions.add(q);
+        q = new Question();
+        q.question="7-3";q.answer="4";q.options = new String[]{"4","10","21"};
+        questions.add(q);
+        q = new Question();
+        q.question="1*4";q.answer="4";q.options = new String[]{"4","3","5"};
+        questions.add(q);
+        q = new Question();
+        q.question="10/2";q.answer="5";q.options = new String[]{"5","20","12"};
+        questions.add(q);
+
+
+        Collections.shuffle(questions);
+
     }
 
     private void clearAnswers(){
@@ -86,7 +106,7 @@ public class TestActivity extends AppCompatActivity {
             }
         }
         double result = 100.0 * (double)sum / (double)questions.size();
-        Intent i = new Intent(getApplicationContext(), ResultActivity.class);
+        Intent i = new Intent(this, ResultActivity.class);
         i.putExtra("result", result);
         startActivity(i);
         finish();
