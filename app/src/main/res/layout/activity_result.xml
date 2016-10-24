@@ -14,11 +14,13 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textAlignment="center"
         android:id="@+id/resul"/>
 
   <Button
       android:layout_width="match_parent"
-      android:onClick="Inicio"
+      android:onClick="inicio"
       android:text="Inicio"
       android:layout_height="wrap_content" />
 

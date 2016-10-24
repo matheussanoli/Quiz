@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -39,6 +38,7 @@ public class HistoricActivity extends Activity implements AdapterView.OnItemClic
         itens.add(item3);
         itens.add(item4);
 
+        historicAdapter = new HistoricAdapter(this, itens);
         //Define o Adapter
         listView.setAdapter(historicAdapter);
         //Cor quando a lista é selecionada para ralagem.
@@ -47,11 +47,6 @@ public class HistoricActivity extends Activity implements AdapterView.OnItemClic
 
     public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
         Test item = (Test) historicAdapter.getItem(arg2);
-        Toast.makeText(
-                getApplicationContext()
-                , "Você escolheu a opção "+(arg3+1)
-                , Toast.LENGTH_LONG
-        ).show();
     }
 }
 

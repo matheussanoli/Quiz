@@ -62,8 +62,8 @@ public class HistoricAdapter extends BaseAdapter {
         TextView hour = (TextView)view.findViewById(R.id.horario);
         hour.setText(String.valueOf(list.getHour()));
 
-        TextView pount = (TextView)view.findViewById(R.id.pontuacao);
-        pount.setText(String.valueOf(list.getPunctuation()));
+        TextView punct = (TextView)view.findViewById(R.id.pontuacao);
+        punct.setText(String.valueOf(list.getPunctuation()));
 
         return view;
     }

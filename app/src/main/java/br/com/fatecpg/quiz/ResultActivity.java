@@ -15,8 +15,7 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
         Intent i = getIntent();
         double result = i.getDoubleExtra("result", 0);
-        setResult(result+"%");
-
+        setResult(Math.round(result)+" pontos");
     }
 
     public Double getEditVal(int id) {
@@ -26,13 +25,13 @@ public class ResultActivity extends AppCompatActivity {
     public void setResult(String r) {
         TextView t = (TextView) findViewById(R.id.resul);
         t.setVisibility(View.VISIBLE);
-        t.setText(r+"%");
+        t.setText(r);
     }
 
-    public void Inicio(View view){
+    public void inicio(View view){
         Intent c = new Intent(this, MainActivity.class);
         double result = c.getDoubleExtra("result", 0);
-        c.putExtra("teste", result);
+        c.putExtra("result", result);
         startActivity(c);
 
         finish();

@@ -14,14 +14,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final TextView t = (TextView) findViewById(R.id.resulteste);
-        Intent c = getIntent();
-
-            double b = c.getDoubleExtra("teste",0);
-            b = b*b/100;
-            TextView ty = (TextView) findViewById(R.id.resulteste);
-
-            t.setText(b+"%");
-
+        Intent i = getIntent();
+        double result = i.getDoubleExtra("result", 0);
+            t.setText(Math.round(result) + "");
     }
 
     public void historico(View view){
