@@ -14,6 +14,9 @@ public class Test {
     private String hour;
     private Integer id;
 
+    public Test(String s) {
+    }
+
     public Integer getId() {
         return id;
     }

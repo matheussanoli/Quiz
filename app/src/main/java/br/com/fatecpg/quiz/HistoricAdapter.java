@@ -44,11 +44,15 @@ public class HistoricAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         Test list = testList.get(position);
+        View view;
 
-        LayoutInflater inflater = (LayoutInflater)
-                context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.order_list, null);
-
+        if (convertView == null) {
+            LayoutInflater inflater = (LayoutInflater)
+                    context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            view = inflater.inflate(R.layout.order_list, null);
+        } else {
+            view = convertView;
+        }
         TextView number = (TextView)view.findViewById(R.id.ordem_numero);
         number.setText(list.getId());
 
