@@ -1,15 +1,11 @@
 package br.com.fatecpg.quiz;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.List;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -34,7 +30,6 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     public void Inicio(View view){
-
         Intent c = new Intent(this, MainActivity.class);
         double result = c.getDoubleExtra("result", 0);
         c.putExtra("teste", result);
@@ -42,4 +37,5 @@ public class ResultActivity extends AppCompatActivity {
 
         finish();
     }
+
 }

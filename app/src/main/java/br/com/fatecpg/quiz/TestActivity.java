@@ -1,17 +1,16 @@
     package br.com.fatecpg.quiz;
 
     import android.content.Intent;
-    import android.os.Bundle;
-    import android.support.v7.app.AppCompatActivity;
-    import android.view.View;
-    import android.widget.RadioButton;
-    import android.widget.RadioGroup;
-    import android.widget.TextView;
-    import android.widget.Toast;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
-    import java.util.ArrayList;
-    import java.util.Collections;
-    import java.util.Random;
+import java.util.ArrayList;
+import java.util.Collections;
 
     public class TestActivity extends AppCompatActivity {
         public static ArrayList<Question> questions = new ArrayList<>();
@@ -40,9 +39,7 @@
         Intent is = new Intent(this, MainActivity.class);
         startActivity(is);
         finish();
-}
-
-
+    }
 
         clearAnswers();
         refreshQuestion();
